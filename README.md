@@ -30,10 +30,12 @@ int yywrap()
 {
 return 1;
 }
-// anb.y file
+// EXP5.y file
 
 %{
-/* Definition section */ #include<stdio.h> #include<stdlib.h>
+/* Definition section */
+#include<stdio.h> 
+#include<stdlib.h>
 %}
 
 %token A B NL
@@ -48,19 +50,18 @@ S: A S B |;
 
 int yyerror(char *msg)
 {
- 
 printf("invalid string\n"); exit(0);
 }
-
-//driver code main()
+int main()
 {
 printf("enter the string\n"); yyparse();
 }
 
+
 ```
 # OUTPUT
 
-![Screenshot from 2024-10-22 10-16-36 1](https://github.com/user-attachments/assets/57ecd540-ae9f-4968-aab4-4bf592793399)
+![Screenshot_from_2024-10-22_10-16-36 1](https://github.com/user-attachments/assets/12eaed1e-fd48-44e3-a593-e4b9b49f23d1)
 
 # RESULT
 The YACC program to recognize the grammar anb where n>=10 is executed successfully and the output is verified.
